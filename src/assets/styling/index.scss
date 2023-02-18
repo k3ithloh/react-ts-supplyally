@@ -1,0 +1,36 @@
+@import 'header';
+@import 'config';
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans",
+    sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+// Body of page
+.layout-children {
+    background-color: #A1A8AE;
+}
+
+
+// General ant design styling
+.ant-layout {
+  background: #FFFFFF;
+}
+.ant-layout-content {
+  background-color: #fff;
+  min-height: calc(100vh - #{$heightFooter} - #{$heightHeader}) !important;
+  overflow: auto;
+}
+.ant-layout.main-layout {
+  background-color: #fff;
+}
+
