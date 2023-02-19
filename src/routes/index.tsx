@@ -1,6 +1,7 @@
-import React, { lazy } from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
+import { Loading } from "../components/Loading";
 import { PATH } from "../constants/paths";
 import Layout from "../pages/layouts/MainLayout";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -23,11 +24,13 @@ export const Router = () => {
         </Helmet>
 
         <Layout>
-          <Routes>
-            <Route path={PATH.LOGIN} element={<LoginPage />} />
-            <Route path={PATH.STATS} element={<Statistics />} />
-            <Route path={PATH.TRACK} element={<TrackParcel />} />
-          </Routes>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path={PATH.LOGIN} element={<LoginPage />} />
+              <Route path={PATH.STATS} element={<Statistics />} />
+              <Route path={PATH.TRACK} element={<TrackParcel />} />
+            </Routes>
+          </Suspense>
         </Layout>
       </HelmetProvider>
     </BrowserRouter>

@@ -4,9 +4,12 @@ import { PageLayout } from "../pages/layouts/PageLayout";
 
 const _StatisticsPage = () => {
   return (
-    <PageLayout>
-      <Statistics />
-    </PageLayout>
+    <div>
+      <h1> Statistics</h1>
+      <div>
+        
+      </div>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ const TrackParcelPage: React.FC = () => {
     // Update parcelStatus state with fetched data
     setParcelStatus(`Delivery status of parcel ${trackingId}`);
   };
-
+  console.log("Page still runs on routing");
   return (
     <div className='bg-gray-100 h-fit flex justify-center items-center'>
       {parcelStatus === "" ? (
