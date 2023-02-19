@@ -73,8 +73,8 @@ const TrackParcelPage: React.FC = () => {
                 Monday, 13 Feb
               </h5>
               <div className='grid grid-cols-2 grid-flow-dense gap-0'>
-                <div className='w-2/5'>2.22 PM</div>
-                <div>
+                <div className='m-0'>2.22 PM</div>
+                <div className='m-0'>
                   Package in transit. Flight containing package has departed.
                 </div>
               </div>
@@ -100,32 +100,29 @@ const TrackParcelPage: React.FC = () => {
               </div>
             </div>
           </div>
+
+          <div>
+            <input
+              type='checkbox'
+              className='appearance-none checked:bg-blue-500 ...'
+            />
+          </div>
+
+          <div className='flex items-center mb-4'>
+            <input
+              id='default-checkbox'
+              type='checkbox'
+              value=''
+              className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+            />
+            <label
+              htmlFor='default-checkbox'
+              className='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+            >
+              Marked as tracked.
+            </label>
+          </div>
         </div>
-        // <div className='parcel-card'>
-        //   <div className='card-need-help'>
-        //     <div className='cards-templates-form'>
-        //       <div className='header-list'>
-        //         <div className='cards00_-header-bardark'>
-        //           <div className='atom-cards-header-bar'>
-        //             <div className='body-1'>
-        //               <div className='profile'>
-        //                 <img
-        //                   src={require("../assets/Cards/parcel.png")}
-        //                   alt='parcel'
-        //                 />
-        //                 <div className='identification-number-label-nric'>
-        //                   <div className='tracking-id'>Tracking Id</div>
-        //                   <div className='x1234567000-t'>{trackingId}</div>
-        //                 </div>
-        //               </div>
-        //             </div>
-        //           </div>
-        //         </div>
-        //       </div>
-        //       <div className='lists'></div>
-        //     </div>
-        //   </div>
-        // </div>
 
         // Original Code
         // <div className='bg-white p-8 rounded-lg shadow-lg'>
