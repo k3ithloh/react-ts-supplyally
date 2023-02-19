@@ -2,7 +2,7 @@ import React, { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { PATH } from "../constants/paths";
-import { MainLayout } from "../pages/layouts/MainLayout";
+import Layout from "../pages/layouts/MainLayout";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 // Pages
@@ -22,14 +22,13 @@ export const Router = () => {
           <link rel='canonical' />
         </Helmet>
 
-        <MainLayout>
+        <Layout>
           <Routes>
             <Route path={PATH.LOGIN} element={<LoginPage />} />
             <Route path={PATH.STATS} element={<Statistics />} />
             <Route path={PATH.TRACK} element={<TrackParcel />} />
           </Routes>
-        </MainLayout>
-
+        </Layout>
       </HelmetProvider>
     </BrowserRouter>
   );

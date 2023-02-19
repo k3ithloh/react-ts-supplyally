@@ -1,36 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'footer';
 @import 'header';
 @import 'config';
+@import 'fonts';
+@import 'login';
+@import 'track';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  font-family: "IBM Plex Sans",
-    sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
 }
 
-// Body of page
-.layout-children {
-    background-color: #A1A8AE;
+.container-fluid {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 15px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
 }
 
-
-// General ant design styling
 .ant-layout {
-  background: #FFFFFF;
+  background: #fff;
 }
 .ant-layout-content {
   background-color: #fff;
-  min-height: calc(100vh - #{$heightFooter} - #{$heightHeader}) !important;
+  min-height: calc(100vh - #{1} - #{$heightHeader}) !important;
   overflow: auto;
 }
 .ant-layout.main-layout {
   background-color: #fff;
 }
 
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.page-button{
+  background-color: #305367;
+}

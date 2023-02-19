@@ -1,24 +1,21 @@
 import React, { ReactNode } from "react";
-import { AppHeader } from "../../components/Header/Header";
-import { Layout } from "antd";
-const { Header, Content, Footer } = Layout;
+import NavigationBar from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
-interface Props {
-  children: ReactNode;
-}
+type LayoutProps = {
+  children: React.ReactNode;
+};
 
-export const MainLayout = (props: Props) => {
-  const { children } = props;
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <Layout className='main-layout'>
-      <Header>
-        <AppHeader />
-      </Header>
-      <Content className='layout-children'>
-        {/* <AppAlert /> */}
-        {children}
-      </Content>
-      <Footer>{/* <AppFooter /> */}</Footer>
-    </Layout>
+    <div className='min-h-screen bg-gray-100'>
+      <NavigationBar />
+      <main>
+        <div className='py-10 sm:py-16'>{children}</div>
+      </main>
+      <Footer />
+    </div>
   );
 };
+
+export default Layout;
