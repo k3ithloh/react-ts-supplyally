@@ -52,7 +52,7 @@ const TrackParcelPage: React.FC = () => {
       ) : (
         // Once Tracking ID is submitted, the following will be displayed
 
-        <div className='flex justify-center'>
+        <div className='flex justify-center flex-col'>
           <div className='rounded-lg shadow-lg bg-white max-w place-content-center items-center pb-2'>
             <div className='flex track-card-header rounded-t-lg pb-2 pt-2 '>
               <img
@@ -72,9 +72,9 @@ const TrackParcelPage: React.FC = () => {
               <h5 className='text-black font-bold text-base mb-2'>
                 Monday, 13 Feb
               </h5>
-              <div className='grid grid-cols-2 grid-flow-dense gap-0'>
-                <div className='m-0'>2.22 PM</div>
-                <div className='m-0'>
+              <div className='grid grid-cols-12'>
+                <div className='col-span-4'>2.22 PM</div>
+                <div className='col-span-7'>
                   Package in transit. Flight containing package has departed.
                 </div>
               </div>
@@ -84,9 +84,11 @@ const TrackParcelPage: React.FC = () => {
               <h5 className='text-black font-bold text-base mb-2'>
                 Sunday, 12 Feb
               </h5>
-              <div className='grid grid-cols-2 grid-flow-dense gap-0'>
-                <div className='w-2/5'>5.09 PM</div>
-                <div>Parcel left the carrier facility</div>
+              <div className='grid grid-cols-12'>
+                <div className='col-span-4'>5.09 PM</div>
+                <div className='col-span-7'>
+                  Parcel left the carrier facility
+                </div>
               </div>
             </div>
 
@@ -94,9 +96,11 @@ const TrackParcelPage: React.FC = () => {
               <h5 className='text-black font-bold text-base mb-2'>
                 Friday, 10 Feb
               </h5>
-              <div className='grid grid-cols-2 grid-flow-dense gap-0'>
-                <div className='w-2/5'>8.41 AM</div>
-                <div>Parcel arrived at a carrier facility</div>
+              <div className='grid grid-cols-12'>
+                <div className='col-span-4'>8.41 AM</div>
+                <div className='col-span-7'>
+                  Parcel arrived at a carrier facility
+                </div>
               </div>
             </div>
           </div>
@@ -117,13 +121,30 @@ const TrackParcelPage: React.FC = () => {
             />
             <label
               htmlFor='default-checkbox'
-              className='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+              className='ml-2 text-sm font-medium text-black'
             >
               Marked as tracked.
             </label>
           </div>
-        </div>
 
+          <div className='grid grid-cols-12'>
+            <button
+              type='submit'
+              className='page-button-white button-alt font-bold rounded-md pt-2 pb-2 col-span-12 md:col-span-2 border-[#305367] mb-3'
+            >
+              Back
+            </button>
+            <div className='col-span-0 md:col-span-8'></div>
+            <button
+              type='submit'
+              className='page-button text-white font-bold rounded-md pt-2 pb-2 col-span-12 md:col-span-2 mb-3 order-first md:order-last'
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        // 343 px mobile
+        // 103px normal
         // Original Code
         // <div className='bg-white p-8 rounded-lg shadow-lg'>
         //   <h1 className='text-2xl font-bold mb-4 text-white track-card-header'>
