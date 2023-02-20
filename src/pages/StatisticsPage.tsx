@@ -1,6 +1,4 @@
 import React from "react";
-import { Statistics } from "../components/Statistics";
-import { PageLayout } from "../pages/layouts/PageLayout";
 
 const _StatisticsPage = () => {
   return (

@@ -1,6 +1,5 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-// import { UserContext } from "../userContext";
 import { useParams } from "react-router-dom";
 
 const ParcelPage: React.FC = () => {

@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       "divider-y": "#E3F2FB",
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

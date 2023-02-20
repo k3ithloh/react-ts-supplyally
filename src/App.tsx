@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Router } from "./routes";
-import "./App.css";
 import "@fontsource/ibm-plex-sans";
 import { UserContext } from "./userContext";
 
