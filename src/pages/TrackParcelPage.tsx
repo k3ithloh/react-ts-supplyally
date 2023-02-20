@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const TrackParcelPage: React.FC = () => {
   const [trackingId, setTrackingId] = useState<string>("");
@@ -128,30 +129,29 @@ const TrackParcelPage: React.FC = () => {
           </div>
 
           <div className='grid grid-cols-12'>
-            <button
-              type='submit'
-              className='page-button-white button-alt font-bold rounded-md pt-2 pb-2 col-span-12 md:col-span-2 border-[#305367] mb-3'
+            <Link
+              to='/track'
+              className='t-2 pt-2 pb-2 col-span-12 md:col-span-2 mb-3 page-button-white button-alt rounded-md p flex justify-center'
             >
-              Back
-            </button>
+              <button
+                type='submit'
+                className=' button-alt font-bold border-[#305367] '
+              >
+                Back
+              </button>
+            </Link>
+
             <div className='col-span-0 md:col-span-8'></div>
-            <button
-              type='submit'
-              className='page-button text-white font-bold rounded-md pt-2 pb-2 col-span-12 md:col-span-2 mb-3 order-first md:order-last'
+            <Link
+              to='/track'
+              className='t-2 pt-2 pb-2 col-span-12 md:col-span-2 mb-3 page-button button-alt rounded-md p flex justify-center order-first md:order-last'
             >
-              Submit
-            </button>
+              <button type='submit' className='text-white font-bold '>
+                Submit
+              </button>
+            </Link>
           </div>
         </div>
-        // 343 px mobile
-        // 103px normal
-        // Original Code
-        // <div className='bg-white p-8 rounded-lg shadow-lg'>
-        //   <h1 className='text-2xl font-bold mb-4 text-white track-card-header'>
-        //     {parcelStatus}
-        //   </h1>
-        //   <p>Details of parcel delivery</p>
-        // </div>
       )}
     </div>
   );

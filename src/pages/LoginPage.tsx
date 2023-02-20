@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -7,9 +8,7 @@ const LoginPage: React.FC = () => {
     setUsername(event.target.value);
   };
 
-  const handleLoginClick = () => {
-    // handle login logic here
-  };
+  const handleLoginClick = () => {};
 
   return (
     <div className='flex items-center justify-center h-fit bg-gray-100'>
@@ -24,13 +23,16 @@ const LoginPage: React.FC = () => {
           value={username}
           onChange={handleUsernameChange}
         />
-        <button
-          type='button'
-          className='page-button text-white font-bold py-3 px-4 w-full rounded'
-          onClick={handleLoginClick}
-        >
-          Login
-        </button>
+
+        <Link to='/track'>
+          <button
+            type='button'
+            className='page-button text-white font-bold py-3 px-4 w-full rounded'
+            onClick={handleLoginClick}
+          >
+            Login
+          </button>
+        </Link>
       </div>
     </div>
   );
