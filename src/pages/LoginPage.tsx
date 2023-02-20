@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../userContext";
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState("");
+  const { setUser } = useContext(UserContext);
 
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
   };
 
-  const handleLoginClick = () => {};
+  const handleLoginClick = () => {
+    const user = { username: username };
+    setUser(user);
+  };
 
   return (
     <div className='flex items-center justify-center h-fit bg-gray-100'>

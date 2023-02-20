@@ -1,37 +1,36 @@
-import React from "react";
-// import logo from './logo.svg';
-// import { connect, ConnectedProps } from 'react-redux';
+import React, { useState, useEffect } from "react";
 import { Router } from "./routes";
 import "./App.css";
 import "@fontsource/ibm-plex-sans";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import { UserContext } from "./userContext";
 
 const App = () => {
-  // useEffect() => {
+  // Provides the other Routes the user state
+  // const [user, setUser] = useState<null>(null);
+  const [user, setUser] = useState<{ [key: string]: any } | null>(null);
+  // const providerValue = useMemo(()=> ({user, setUser}), [user, setUser]);
 
-  // }
+  //Anytime the page is refreshed, adds the user state back into the Context
+  useEffect(() => {
+    let fetchedUser = localStorage.getItem("user");
+    if (fetchedUser != null) {
+      const parsedUser = JSON.parse(fetchedUser);
+      setUser(parsedUser);
+    } else {
+      setUser(null);
+    }
+  }, []);
 
-  return <Router />;
+  return (
+    <UserContext.Provider
+      value={{
+        user,
+        setUser,
+      }}
+    >
+      <Router />
+    </UserContext.Provider>
+  );
 };
 
 export default App;
