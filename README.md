@@ -1,8 +1,10 @@
 # Getting Started with Keith Loh React Typescript Assignment
 
+### `Site is live on production!`
+
+To view the site live, please visit [https://react-ts-supplyally.vercel.app/]
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `yarn start`
@@ -20,5 +22,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-
