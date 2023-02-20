@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+// import { UserContext } from "../userContext";
+import { useParams } from "react-router-dom";
 
-const ParcelInfoPage: React.FC = () => {
+const ParcelPage: React.FC = () => {
+  // const { user } = useContext(UserContext)
+  const { id } = useParams<{ id: string }>();
+  console.log("Parcel Info Page");
   return (
     // Once Tracking ID is submitted, the following will be displayed
 
@@ -15,7 +20,7 @@ const ParcelInfoPage: React.FC = () => {
           />
           <div className='grid grid-rows-2 text-white pl-3 gap-0'>
             <span className='text-xs font-normal pb-0 mt-3'>Tracking ID</span>
-            <span className='text-lg font-bold'>trackingId</span>
+            <span className='text-lg font-bold'>{id}</span>
           </div>
         </div>
 
@@ -102,3 +107,5 @@ const ParcelInfoPage: React.FC = () => {
     </div>
   );
 };
+
+export default ParcelPage;

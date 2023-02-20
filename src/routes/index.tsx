@@ -12,7 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 const LoginPage = lazy(() => import("../pages/LoginPage"));
 const Statistics = lazy(() => import("../pages/StatisticsPage"));
 const TrackParcel = lazy(() => import("../pages/TrackParcelPage"));
-const Parcel = lazy(() => import("../pages/TrackParcelPage"));
+const Parcel = lazy(() => import("../pages/ParcelPage"));
 
 const helmetContext = {};
 

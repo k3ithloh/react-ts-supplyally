@@ -13,6 +13,7 @@ const LoginPage: React.FC = () => {
   const handleLoginClick = () => {
     const user = { username: username };
     setUser(user);
+    localStorage.setItem("user", JSON.stringify(user));
   };
 
   return (

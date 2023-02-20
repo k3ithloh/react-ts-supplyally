@@ -1,22 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const TrackParcelPage: React.FC = () => {
   const [trackingId, setTrackingId] = useState<string>("");
-  const [parcelStatus, setParcelStatus] = useState<string>("");
+  const navigate = useNavigate();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTrackingId(event.target.value);
   };
 
-  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Fetch parcel details using trackingId
-    // Update parcelStatus state with fetched data
-    setParcelStatus(`Delivery status of parcel ${trackingId}`);
+  const handleFormSubmit = () => {
+    navigate(`/track/${trackingId}`);
   };
 
-  console.log("Page still runs on routing");
+  console.log("TrackParcelPage rendering");
   return (
     <div className='bg-gray-100 h-fit flex justify-center items-center'>
       <div className='bg-white p-10 rounded-lg shadow-md'>
@@ -45,6 +42,7 @@ const TrackParcelPage: React.FC = () => {
           <button
             type='submit'
             className='page-button w-full text-white font-bold py-2 px-4 rounded-md'
+            onClick={handleFormSubmit}
           >
             Check
           </button>
