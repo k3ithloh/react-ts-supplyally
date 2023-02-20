@@ -9,7 +9,7 @@ const ParcelPage: React.FC = () => {
   return (
     // Once Tracking ID is submitted, the following will be displayed
 
-    <div className='flex justify-center flex-col'>
+    <div className='flex justify-center flex-col mx-10 sm:mx-20'>
       <div className='rounded-lg shadow-lg bg-white max-w place-content-center items-center pb-2'>
         <div className='flex track-card-header rounded-t-lg pb-2 pt-2 '>
           <img
@@ -58,14 +58,7 @@ const ParcelPage: React.FC = () => {
         </div>
       </div>
 
-      <div>
-        <input
-          type='checkbox'
-          className='appearance-none checked:bg-blue-500 ...'
-        />
-      </div>
-
-      <div className='flex items-center mb-4'>
+      <div className='flex items-center mb-4 mt-4'>
         <input
           id='default-checkbox'
           type='checkbox'
@@ -83,12 +76,9 @@ const ParcelPage: React.FC = () => {
       <div className='grid grid-cols-12'>
         <Link
           to='/track'
-          className='t-2 pt-2 pb-2 col-span-12 md:col-span-2 mb-3 page-button-white button-alt rounded-md p flex justify-center'
+          className='t-2 pt-2 pb-2 col-span-12 md:col-span-2 mb-3 bg-white button-alt rounded-md p flex justify-center border border-[#305367]'
         >
-          <button
-            type='submit'
-            className=' button-alt font-bold border-[#305367] '
-          >
+          <button type='submit' className=' button-alt font-bold '>
             Back
           </button>
         </Link>

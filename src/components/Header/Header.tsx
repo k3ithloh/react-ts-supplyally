@@ -1,4 +1,3 @@
-
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../userContext";
@@ -20,7 +19,7 @@ const NavigationBar = () => {
   return (
     <nav className='bg-white border-b-2 border-gray-200 py-4 md:px-4 '>
       {user ? (
-        <div className='max-w-full mx-auto px-2 sm:px-6 lg:px-8 flex items-center justify-between'>
+        <div className='max-w-full mx-4 px-2 sm:px-6 lg:px-8 flex items-center justify-between'>
           <div className='flex place-items-center place-items-start items-center'>
             <Link to='/'>
               <img
@@ -105,13 +104,13 @@ const NavigationBar = () => {
             {user ? (
               <div className='px-2 pt-2 pb-3 sm:px-3'>
                 <Link
-                  to='/'
+                  to='/track'
                   className='block text-gray-800 font-bold mt-1 py-2 px-3 rounded-md hover:bg-gray-100 hover:text-gray-900'
                 >
                   Track
                 </Link>
                 <Link
-                  to='/'
+                  to='/stats'
                   className='block text-gray-800 font-bold mt-1 py-2 px-3 rounded-md hover:bg-gray-100 hover:text-gray-900'
                 >
                   Statistics
